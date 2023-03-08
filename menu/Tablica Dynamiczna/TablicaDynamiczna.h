@@ -13,6 +13,9 @@ public:
     void usun_dane(int wybor_elementu);
     int dostanRozmiar();
     int dostanTablice();
+    int dostanElement(int dane);
+    void zamien_wartosci(int miejsca_pierwszego, int wartosc, int miejsce_drugiego, int druga_wartośc);
+
 
 private:
     int rozmiar_tablic;

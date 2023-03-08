@@ -6,14 +6,13 @@
 #include "ListaWezel.h"
 #include <iostream>
 
-
+//TODO error handling + ograniczenia
 
 ListaDwukierunkowa::ListaDwukierunkowa() {
     this->glowa = nullptr;
     this->ogon = nullptr;
     this->ilosc = 0;
 }
-
 void ListaDwukierunkowa::dodaj_poczatek(int dane) {
     ListaWezel *temp = new ListaWezel(dane);
     temp->nastepna = this->glowa;
@@ -26,7 +25,6 @@ void ListaDwukierunkowa::dodaj_poczatek(int dane) {
     }
     this->ilosc++;
 }
-
 void ListaDwukierunkowa::dodaj_koniec(int dane) {
     ListaWezel *temp = new ListaWezel(dane);
     temp->nastepna = nullptr;
@@ -39,7 +37,6 @@ void ListaDwukierunkowa::dodaj_koniec(int dane) {
     }
     this->ilosc++;
 }
-
 void ListaDwukierunkowa::dodaj_srodek(int dane, int wybor_miejsca) {
     std::cout << this->ilosc  << std::endl;
     ListaWezel *temp = glowa;
@@ -57,6 +54,7 @@ void ListaDwukierunkowa::dodaj_srodek(int dane, int wybor_miejsca) {
 
 
     std::cout << "dziala" << std::endl;
+    ilosc++;
 }
 
 void ListaDwukierunkowa::usun_koniec() {
@@ -73,12 +71,15 @@ void ListaDwukierunkowa::usun_koniec() {
 }
 
 void ListaDwukierunkowa::usun_pocztek() {
-    ListaWezel *temp = glowa;
-    glowa = temp->nastepna;
-    glowa->ostania = nullptr;
     if(ilosc ==1){
         ogon = nullptr;
+    }else{
+        ListaWezel *temp = glowa;
+        glowa = temp->nastepna;
+        glowa->ostania = nullptr;
+        delete temp;
     }
+    ilosc--;
 }
 
 void ListaDwukierunkowa::usun_srodek(int wybor_miejsca) {
@@ -93,11 +94,8 @@ void ListaDwukierunkowa::usun_srodek(int wybor_miejsca) {
         }
         temp = temp->nastepna;
     }
-
+    ilosc--;
 }
-
-
-
 void ListaDwukierunkowa::wyswietl_liste() {
 
    ListaWezel *temp = glowa;

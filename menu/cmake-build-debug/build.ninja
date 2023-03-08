@@ -79,6 +79,18 @@ build CMakeFiles/menu.dir/Lista_Dwukierunkowa/ListaWezel.cpp.obj: CXX_COMPILER__
   OBJECT_DIR = CMakeFiles\menu.dir
   OBJECT_FILE_DIR = CMakeFiles\menu.dir\Lista_Dwukierunkowa
 
+build CMakeFiles/menu.dir/DrzewoBST/DrzewoBST.cpp.obj: CXX_COMPILER__menu_Debug C$:/Users/Jakub/CLionProjects/menu/DrzewoBST/DrzewoBST.cpp || cmake_object_order_depends_target_menu
+  DEP_FILE = CMakeFiles\menu.dir\DrzewoBST\DrzewoBST.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++11
+  OBJECT_DIR = CMakeFiles\menu.dir
+  OBJECT_FILE_DIR = CMakeFiles\menu.dir\DrzewoBST
+
+build CMakeFiles/menu.dir/DrzewoBST/DrzewoWezel.cpp.obj: CXX_COMPILER__menu_Debug C$:/Users/Jakub/CLionProjects/menu/DrzewoBST/DrzewoWezel.cpp || cmake_object_order_depends_target_menu
+  DEP_FILE = CMakeFiles\menu.dir\DrzewoBST\DrzewoWezel.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++11
+  OBJECT_DIR = CMakeFiles\menu.dir
+  OBJECT_FILE_DIR = CMakeFiles\menu.dir\DrzewoBST
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target menu
@@ -87,7 +99,7 @@ build CMakeFiles/menu.dir/Lista_Dwukierunkowa/ListaWezel.cpp.obj: CXX_COMPILER__
 #############################################
 # Link the executable menu.exe
 
-build menu.exe: CXX_EXECUTABLE_LINKER__menu_Debug CMakeFiles/menu.dir/main.cpp.obj CMakeFiles/menu.dir/Tablica_Dynamiczna/TablicaDynamiczna.cpp.obj CMakeFiles/menu.dir/Lista_Dwukierunkowa/ListaDwukierunkowa.cpp.obj CMakeFiles/menu.dir/Kopiec_Binarny/KopiecBinarny.cpp.obj CMakeFiles/menu.dir/Lista_Dwukierunkowa/ListaWezel.cpp.obj
+build menu.exe: CXX_EXECUTABLE_LINKER__menu_Debug CMakeFiles/menu.dir/main.cpp.obj CMakeFiles/menu.dir/Tablica_Dynamiczna/TablicaDynamiczna.cpp.obj CMakeFiles/menu.dir/Lista_Dwukierunkowa/ListaDwukierunkowa.cpp.obj CMakeFiles/menu.dir/Kopiec_Binarny/KopiecBinarny.cpp.obj CMakeFiles/menu.dir/Lista_Dwukierunkowa/ListaWezel.cpp.obj CMakeFiles/menu.dir/DrzewoBST/DrzewoBST.cpp.obj CMakeFiles/menu.dir/DrzewoBST/DrzewoWezel.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\menu.dir
